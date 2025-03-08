@@ -4,6 +4,7 @@ import { ColorPicker } from './components/ColorPicker';
 import { Notifications } from './components/Notifications';
 import { AdminPanel } from './components/AdminPanel';
 import { Menu } from './components/Menu';
+import { PixelManager } from './components/PixelManager'; // Importation de PixelManager
 import { useStore } from './store';
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
   const user = useStore(state => state.user);
 
   useEffect(() => {
-    // Check if we have Supabase credentials
+    // Vérifie si les credentials Supabase sont disponibles
     const hasCredentials = !!import.meta.env.VITE_SUPABASE_URL && 
                          !!import.meta.env.VITE_SUPABASE_ANON_KEY;
     
@@ -26,6 +27,7 @@ function App() {
       <ColorPicker />
       <Notifications />
       <Menu />
+      <PixelManager /> {/* Ajouter PixelManager ici */}
       {user && <AdminPanel />}
     </div>
   );

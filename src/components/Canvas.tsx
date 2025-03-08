@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState, useCallback, useMemo } from 'react'
 import { useStore } from '../store';
 import { Users } from 'lucide-react';
 
-const CANVAS_SIZE = 100;
+const CANVAS_SIZE = 100000;
 const PIXEL_SIZE = 10;
 const MIN_ZOOM = 0.5;
 const MAX_ZOOM = 10;
